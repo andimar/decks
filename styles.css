@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+#card_video, .video-js {
+    width: calc(100% - 10px);
+    height: auto;
+}
+
+.card {
+    width: 90%;
+    height: 90%; /* Altezza fissa per la carta */
+    max-width: 300px;
+    max-height: 850px;
+    
+    display: flex;
+    
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px; /* Aggiunto margine per la carta */
+
+    /* Stili esistenti per .card... */
+    flex-direction: column; /* Per allineare verticalmente gli elementi */
+    justify-content: center; /* Per distribuire gli spazi tra gli elementi */
+    position: relative; /* Impostato per posizionamento relativo degli elementi interni */
+}
+
+
+.question-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 50px); /* Altezza meno l'altezza del bottone */
+    width: calc(100% - 20px); /* Altezza meno l'altezza del bottone */
+    flex-direction: column;
+    color: #333;
+    
+}
+
+.title       { font: normal 800 2em/1.2em    'Montserrat', sans-serif; margin: 1em 0 0 0;       }
+.subtitle    { font: normal 600 1.35em/1.2em 'Montserrat', sans-serif; margin: 0.5em 0 0.5em 0; }
+.description { font: normal 500 1.0em/1.2em  'Montserrat', sans-serif; }
+.question    { font: italic 600 0.9em/1.2em  'Montserrat', sans-serif; color: #777;}
+.question.string { font: normal 600 1.3em/1.3em  'Montserrat', sans-serif; color: #333;}
+
+.question.video-question {
+    font: normal 600 1.5em/1.2em 'Montserrat', sans-serif;
+    color: #333;
+}
+.subtitle.video-question { margin: 0.5em 0 1.5em 0; }
+
+#nextButton {
+    position: absolute; /* Posizionamento assoluto */
+    bottom: 0; /* Posizionato in fondo alla carta */
+    left: 0;
+    width: 100%; /* Larghezza estesa a tutta la carta */
+    padding: 15px 0;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 0 0 10px 10px; /* Arrotondamento solo sugli angoli inferiori */
+
+    font: normal 400 1.2em/1em 'Montserrat', sans-serif;
+    
+    cursor: pointer;
+}
+
+#shuffleButton > img {
+
+    width: 16x;
+    height: 16px;
+}
+
+#shuffleButton {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    position: absolute; /* Posizionamento assoluto */
+    top: 10px; 
+    right: 10px;
+    width: 50%; /* Larghezza estesa a tutta la carta */
+    padding: 15px 0;
+    background-color: rgb(255, 255, 255);
+    color: #118811;
+    border: none;
+    border-radius:  10px ;
+
+    font: normal 400 1em/1em 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+#nextButton:hover {
+    background-color: darkgreen;
+}
+
+
+#deckCounter {
+    position: absolute; /* Posizionamento assoluto */
+    top: 15px; 
+    left: 15px;
+    height: 40px;
+    width: 50px;
+    font: normal 500 14px/40px 'Montserrat', sans-serif;
+    color:white;
+    background-color: green;
+    border-radius:5px;
+    padding:0 10px;
+
+}
+
+@media screen and (max-width: 600px) {
+    body, html {
+        width: 100%; /* Imposta la larghezza al 100% solo su mobile */
+    }
+
+    .card {
+        width: calc(100% - 20px); /* Calcolo della larghezza con margine */
+        height: calc(100% - 20px); /* Calcolo dell'altezza con margine */
+        margin: 10px; /* Margine costante attorno alla carta */
+        border-radius: 10px; /* Bordi arrotondati mantenuti */
+    }
+}
