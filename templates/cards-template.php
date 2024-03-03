@@ -12,13 +12,17 @@ $base_url  = ANDIMAR_CARDS_URI;
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title><?=$title?></title>
    
     <link rel="stylesheet" href="<?=$base_url?>styles.css?v<?=ANDIMAR_CARDS_VERSION?>">
     <script src="<?=$base_url?>templates/js/questions.js?v<?=ANDIMAR_CARDS_VERSION?>"></script>
     <script src="<?=$base_url?>templates/js/deck.js?v<?=ANDIMAR_CARDS_VERSION?>"></script>  
+    <script>
+        document.addEventListener('dblclick', function(event) {
+            event.preventDefault(); // Previene lo zoom su doppio click
+        }, { passive: false });
+    </script>
   
 </head>
 <body>
